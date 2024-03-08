@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="fonts/gamefont.css">
+        
+        <style>
+            #loading-text {
+                color: white;
+                font-size: 10vh;
+                position: absolute;
+                left: 50%;
+                top: 10vh;
+                text-align: center;
+            }
+
+            #loading-text-inner {
+                position: relative;
+                left: -50%;
+            }
+            
+            #debug-textarea-container {
+                width: 100vw; 
+                height: 80vh; 
+                margin: auto; 
+                display: flex; 
+                flex-direction: column; 
+                border: none;
+            }
+            
+            #consolearea {
+                display: none;
+                font-size: 10px;
+                box-sizing: border-box;
+                height: 100%;
+                resize: none;
+                background-color: black;
+                color: white;
+            }
+        </style>
+
+        <meta charset="UTF-8">
+        <title>OMORI for Android (not official)</title>
+        <script type="text/javascript" src="browser_ver/AES-JS/aes-js.js"></script>
+        <script type="text/javascript" src="browser_ver/nwjs-compat.js"></script>
+        <script type="text/javascript" src="browser_ver/config.js"></script>
+    </head>
+    
+    <body style="position: fixed; background-color: black; margin: 0; padding: 0;">
+        <div id="loading-text">
+            <div id="loading-text-inner">Loading the game,<br>please wait...</div>
+        </div>        
+        <div id="debug-textarea-container">
+            <textarea id="consolearea" readonly></textarea>
+        </div>
+        
+        <!-- Game code loaded here -->
+        <script type="text/javascript" src="./js/libs/pixi.js"></script>
+        <script type="text/javascript" src="./js/libs/pixi-tilemap.js"></script>
+        <script type="text/javascript" src="./js/libs/pixi-picture.js"></script>
+        <script type="text/javascript" src="./js/libs/lz-string.js"></script>
+        <script type="text/javascript" src="./js/libs/iphone-inline-video.browser.js"></script>
+        <script type="text/javascript" src="./js/rpg_core.js"></script>
+        <script type="text/javascript" src="./js/rpg_managers.js"></script>
+        <script type="text/javascript" src="./js/rpg_objects.js"></script>
+        <script type="text/javascript" src="./js/rpg_scenes.js"></script>
+        <script type="text/javascript" src="./js/rpg_sprites.js"></script>
+        <script type="text/javascript" src="./js/rpg_windows.js"></script>
+        <script type="text/javascript" src="./js/plugins.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </body>
+</html>
